@@ -6,3 +6,5 @@ const db = new Sequelize("magno-new", "root", "secret", {
 });
 
 export default db;
+ 
+

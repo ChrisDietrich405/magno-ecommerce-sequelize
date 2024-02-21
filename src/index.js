@@ -1,8 +1,12 @@
 import express from "express";
 import db from "./config/db.js";
 
+import shoesRouter from "./routes/shoes.js";
+
 const app = express();
 app.use(express.json());
+
+app.use("/api", shoesRouter);
 
 async function syncDB() {
   try {
@@ -15,9 +19,6 @@ async function syncDB() {
 
 syncDB();
 
-app.get("/shoes", (req, res) => {
-  res.json("hello shoes");
-});
 
 app.listen(3000, () => {
   console.log("hello");
