@@ -1,0 +1,24 @@
+{
+  "development": {
+    "username": "chris",
+    "password": "chris123",
+    "database": "magno-new",
+    "host": "127.0.0.1",
+    "port": "3307", 
+    "dialect": "mysql"
+  },
+
+  "test": {
+    "username": "root",
+    "password": "secret",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": "secret",
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}

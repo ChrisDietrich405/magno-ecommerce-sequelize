@@ -1,0 +1,31 @@
+version: "3"
+
+services:
+  dev:
+    build:
+      context: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./:/react-app
+    depends_on:
+      - database
+    networks:
+      - backend_network
+  database:
+    image: mysql:5.7
+    ports:
+      - "3307:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=secret
+      - MYSQL_USER=chris
+      - MYSQL_PASSWORD=chris123
+      - MYSQL_DATABASE=magno-new
+    networks:
+      - backend_network
+
+networks:
+  backend_network:
+    driver: bridge
+
+
