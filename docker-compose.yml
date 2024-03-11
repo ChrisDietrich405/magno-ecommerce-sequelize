@@ -12,6 +12,8 @@ services:
       - database
     networks:
       - backend_network
+
+  # the db service has no connection to the dockerfile
   database:
     image: mysql:5.7
     ports:

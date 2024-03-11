@@ -3,8 +3,8 @@
     "username": "chris",
     "password": "chris123",
     "database": "magno-new",
-    "host": "127.0.0.1",
-    "port": "3307", 
+    "host": "database",
+    "port": "3306", 
     "dialect": "mysql"
   },
 
