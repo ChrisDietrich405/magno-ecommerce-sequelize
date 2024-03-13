@@ -1,29 +1,33 @@
 'use strict';
-/** @type {import('sequelize-cli').Migration} */
-module.exports = {
+
+import { DataTypes } from 'sequelize';
+
+const { Migration } = require('sequelize-cli');
+
+export default class CreateShoesTable extends Migration {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('Shoes', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: DataTypes.INTEGER
       },
       name: {
-        type: Sequelize.STRING
+        type: DataTypes.STRING
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: DataTypes.DATE
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: DataTypes.DATE
       }
     });
-  },
+  }
+
   async down(queryInterface, Sequelize) {
     await queryInterface.dropTable('Shoes');
   }
-};
-
+}

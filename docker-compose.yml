@@ -12,6 +12,7 @@ services:
       - database
     networks:
       - backend_network
+    restart: always
 
   # the db service has no connection to the dockerfile
   database:
@@ -29,5 +30,4 @@ services:
 networks:
   backend_network:
     driver: bridge
-
 
