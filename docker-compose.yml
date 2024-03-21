@@ -5,14 +5,14 @@ services:
     build:
       context: .
     ports:
-      - "3000:3000"
+      - "3000:3004" 
     volumes:
       - ./:/react-app
     depends_on:
       - database
     networks:
       - backend_network
-    restart: always
+    restart: always #if container breaks (for ex it freezes) the container will be started
 
   # the db service has no connection to the dockerfile
   database:
@@ -30,4 +30,9 @@ services:
 networks:
   backend_network:
     driver: bridge
+
+
+
+
+
 

@@ -4,8 +4,8 @@ import { Sequelize } from "sequelize";
 
 // database here refers to the database service in docker compose
 
-const db = new Sequelize("magno-new", "chris", "chris123", {
-  host: "database",
+const db = new Sequelize("magno-new", "root", "secret", {
+  host: "localhost",
   dialect: "mysql",
   port: "3306",
 });

@@ -21,6 +21,6 @@ async function syncDB() {
 
 syncDB();
 
-app.listen(3000, () => {
+app.listen(3004, () => {
   console.log("hello");
 });

@@ -5,5 +5,4 @@ const router = express.Router();
 
 router.post("/shoes", addShoesController);
 
-
 export default router;

@@ -8,11 +8,19 @@ const Shoes = db.define("Shoes", {
     autoIncrement: true,
     allowNull: false,
   },
+  brand: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
   name: {
     type: DataTypes.STRING,
     allowNull: false,
-    unique: true,
   },
+  price: {
+    type: DataTypes.FLOAT,
+    allowNull: false
+  }
+
 }, 
 {
   timestamps: true, 
