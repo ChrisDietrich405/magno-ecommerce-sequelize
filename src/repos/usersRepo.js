@@ -1,10 +1,9 @@
 import User from "../model/usersModel.js";
 
-const addUser = async (body) => {
-  const { firstName, lastName, isAdmin } = body;
-  console.log(firstName)
-  return await User.create({ firstName, lastName, isAdmin });
+const createAccount = async (body) => {
+  const { firstName, lastName, email, password, isAdmin } = body;
+  return await User.create({ firstName, lastName, email, password, isAdmin });
 };
 
-export { addUser };
+export { createAccount };
 
